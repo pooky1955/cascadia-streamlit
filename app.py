@@ -25,7 +25,7 @@ def main():
             </p>
             """, unsafe_allow_html=True)
     model = load_ner()
-    RAW_TEXT_PLACEHOLDER = "I've been affected by fever and more."
+    RAW_TEXT_PLACEHOLDER = "The patient has been taking Advil but experienced stomach ache."
     raw_text = st.text_area("", RAW_TEXT_PLACEHOLDER)
 
     if len(raw_text) < 10:
