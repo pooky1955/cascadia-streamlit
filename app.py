@@ -25,7 +25,7 @@ def main():
             </p>
             """, unsafe_allow_html=True)
     model = load_ner()
-    RAW_TEXT_PLACEHOLDER = "The patient has been taking Advil but experienced stomach ache."
+    RAW_TEXT_PLACEHOLDER = "The patient has been taking Advil but experienced stomach ache. He was relieved with omeprazole."
     raw_text = st.text_area("", RAW_TEXT_PLACEHOLDER)
 
     if len(raw_text) < 10:
@@ -47,6 +47,7 @@ def main():
     st.write(outputs)
     st.write("## Want to know more about this project?")
     st.video("https://youtu.be/iiF39aEqLJ4")
+    st.write("View the source code at https://github.com/pooky1955/cascadia-streamlit")
 
 
 

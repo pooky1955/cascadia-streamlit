@@ -79,7 +79,7 @@ def get_tokens_from_ner(raw_outputs, entity_list=['ADR', 'DRUG']):
 def specific_to_df(raw_els_list,term_col,score_col,term_name):
     if len(raw_els_list) == 0:
         return f"Our model didn't detect any {term_name} in the sentence. (It might be wrong!)"
-    els_list = [(term,scores.mean()) for term, scores in raw_els_list if scores.mean() > 0.92]
+    els_list = [(term,scores.mean()) for term, scores in raw_els_list if scores.mean() > 0.88]
     if len(els_list) == 0:
         return f"Our model is not sure if there are any {term_name} in the sentence. (It might be wrong!)"
     terms, scores = list(zip(*els_list))
