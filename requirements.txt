@@ -1,2 +1,4 @@
-transformers
-streamlit
+streamlit==1.8.0
+transformers==4.15.0
+numpy==1.21.4
+pandas==1.4.1

@@ -12,11 +12,7 @@ MODEL_PATH = "abhibisht89/spanbert-large-cased-finetuned-ade_corpus_v2"
 def load_ner(use_gpu=False, model_path=MODEL_PATH):
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     model = AutoModelForTokenClassification.from_pretrained(model_path)
-    if use_gpu:
-        return pipeline("ner", model=model, tokenizer=tokenizer, device=0)
-    else:
-        return pipeline("ner", model=model, tokenizer=tokenizer)
-    return model
+    return pipeline("ner", model=model, tokenizer=tokenizer)
 
 def main():
     st.write("<h1 style='text-align : center'> Cascadia: Detecting Drug Prescribing Cascades Through Deep Learning </h1>",
