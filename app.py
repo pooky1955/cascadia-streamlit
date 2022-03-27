@@ -47,6 +47,7 @@ def main():
     st.write(outputs)
     st.write("## Want to know more about this project?")
     st.video("https://youtu.be/iiF39aEqLJ4")
+    st.write("## Source Code")
     st.write("View the source code at https://github.com/pooky1955/cascadia-streamlit")
 
 
