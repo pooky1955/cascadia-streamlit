@@ -5,10 +5,9 @@ from transformers import AutoTokenizer, AutoModelForTokenClassification
 from tokenizers import Tokenizer
 import transformers
 
-TEN_MINUTES = 10 * 60
 MODEL_PATH = "abhibisht89/spanbert-large-cased-finetuned-ade_corpus_v2"
 
-@st.cache(allow_output_mutation=True,suppress_st_warning=True, show_spinner=False,max_entries=2,ttl=TEN_MINUTES,hash_funcs={Tokenizer : id})
+@st.cache(allow_output_mutation=True,suppress_st_warning=True, show_spinner=False,max_entries=1,hash_funcs={Tokenizer : id})
 def load_ner(use_gpu=False, model_path=MODEL_PATH):
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     model = AutoModelForTokenClassification.from_pretrained(model_path)
